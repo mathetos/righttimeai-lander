@@ -1,0 +1,23 @@
+# v0 runtime files (should only exist in preview, not in git)
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+instrumentation-client.js
+instrumentation-client.ts
+
+# Dependencies and build
+node_modules/
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# Environment (never commit secrets)
+.env
+.env*.local
+
+# IDE and OS
+.DS_Store
+*.log
+
+# Vercel
+.vercel
