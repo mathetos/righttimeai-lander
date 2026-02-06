@@ -101,3 +101,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* MailerLite embed: keep our layout and spacing */
+.ml-embed-wrapper {
+  min-height: 120px;
+}
+.ml-embed-wrapper .ml-embedded {
+  width: 100%;
+}
+.ml-embed-wrapper iframe {
+  width: 100% !important;
+  max-width: 100%;
+}
