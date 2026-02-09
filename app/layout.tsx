@@ -1,12 +1,12 @@
 import React from "react"
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
-import { Nunito } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
+import { MailerLiteScript } from "@/components/mailerlite-script";
 
-const _geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const _nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: "RightTime - Scheduling, without the work",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f5f5f8",
+  themeColor: "#faf9f8",
 };
 
 export default function RootLayout({
@@ -24,8 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${_geist.variable} ${_nunito.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
+      <body className="min-h-screen bg-background font-sans antialiased selection:bg-brand-soft selection:text-brand-strong">
+        <MailerLiteScript />
+        {children}
+      </body>
     </html>
   );
 }

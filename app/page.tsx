@@ -1,31 +1,17 @@
-import { Header } from "@/components/header";
+import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { Problem } from "@/components/problem";
 import { Features } from "@/components/features";
-import { BetaAccess } from "@/components/beta-access";
-import { Signup } from "@/components/signup";
-import { Footer } from "@/components/footer";
-import { DecorativeBg } from "@/components/decorative-bg";
+import { CtaBeta } from "@/components/cta-beta";
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen">
-      <DecorativeBg />
-      <div className="relative z-10">
-        <Header />
+    <div className="min-h-screen bg-background font-sans selection:bg-brand-soft selection:text-brand-strong">
+      <Navbar />
+      <main>
         <Hero />
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="h-px bg-border" />
-        </div>
-        <Problem />
         <Features />
-        <BetaAccess />
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="h-px bg-border" />
-        </div>
-        <Signup />
-        <Footer />
-      </div>
-    </main>
+        <CtaBeta />
+      </main>
+    </div>
   );
 }
